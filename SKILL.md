@@ -1,4 +1,17 @@
-# 家居顾问 Skill
+---
+name: home-advisor
+description: This skill provides home advisory services including dish recommendations and home repair guidance. It should be used when users ask about cooking recipes, dish recommendations, home repair instructions, or related household advice.
+version: 1.0.0
+author: 宸良手纪
+triggers:
+  - 菜品推荐
+  - 做什么菜
+  - 维修指导
+  - 家居维修
+  - 菜谱查询
+---
+
+# 家居顾问 Skill (Home Advisor)
 
 ## 功能说明
 
@@ -18,17 +31,33 @@
 - 用户问："墙面裂缝怎么办？"
 - 用户问："电路故障如何排查？"
 
-## 工具说明
+## 工具使用
 
 ### search_dishes
+
 搜索菜品数据库，返回匹配的菜品信息和做法。
+
+**使用方法：**
+
+```bash
+python scripts/search_dishes.py --query "鸡丁"
+python scripts/search_dishes.py --query "西红柿" --limit 3
+```
 
 **参数：**
 - `query`: 搜索关键词（菜名、食材、口味等）
 - `limit`: 返回结果数量（默认 5）
 
 ### search_repair
+
 搜索维修知识库，返回维修步骤和注意事项。
+
+**使用方法：**
+
+```bash
+python scripts/search_repair.py --query "水龙头"
+python scripts/search_repair.py --query "漏水" --limit 2
+```
 
 **参数：**
 - `query`: 搜索关键词（维修项目、故障现象等）
@@ -39,15 +68,27 @@
 - 菜品数据：`data/dishes-index.json`
 - 维修数据：`data/repair-index.json`
 
-## 使用示例
+## 配置
 
-```bash
-# 搜索菜品
-python scripts/search_dishes.py --query "鸡丁"
+详细配置说明请参考 [CONFIG.md](CONFIG.md)。
 
-# 搜索维修
-python scripts/search_repair.py --query "水龙头"
-```
+快速配置：
+
+1. **使用环境变量**：
+   ```bash
+   export HOME_ADVISOR_DATA_DIR="/path/to/data"
+   ```
+
+2. **使用配置文件**：
+   创建 `config.json`：
+   ```json
+   {
+     "data_dir": "./data"
+   }
+   ```
+
+3. **使用默认路径**：
+   将数据文件放在 `./data/` 目录即可。
 
 ## 安装到 AI 助手
 

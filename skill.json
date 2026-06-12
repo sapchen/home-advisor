@@ -1,7 +1,7 @@
 {
   "name": "home-advisor",
   "version": "1.0.0",
-  "description": "家居顾问 Skill - 提供菜品推荐和家居维修指导",
+  "description": "This skill provides home advisory services including dish recommendations and home repair guidance.",
   "author": "宸良手纪",
   "triggers": [
     "菜品推荐",
