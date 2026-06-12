@@ -1,0 +1,7 @@
+{
+  "data_dir": "./data",
+  "dishes_file": "dishes-index.json",
+  "repair_file": "repair-index.json",
+  "default_limit": 5,
+  "notes": "复制此文件为 config.json 并修改 data_dir 为你的数据目录"
+}

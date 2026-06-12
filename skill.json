@@ -1,0 +1,36 @@
+{
+  "name": "home-advisor",
+  "version": "1.0.0",
+  "description": "家居顾问 Skill - 提供菜品推荐和家居维修指导",
+  "author": "宸良手纪",
+  "triggers": [
+    "菜品推荐",
+    "做什么菜",
+    "维修指导",
+    "家居维修",
+    "菜谱查询"
+  ],
+  "tools": [
+    {
+      "name": "search_dishes",
+      "description": "搜索菜品信息",
+      "script": "scripts/search_dishes.py"
+    },
+    {
+      "name": "search_repair",
+      "description": "搜索维修指导",
+      "script": "scripts/search_repair.py"
+    }
+  ],
+  "platforms": {
+    "codebuddy": {
+      "install_path": ".codebuddy/skills/home-advisor"
+    },
+    "trae": {
+      "install_path": "skills/home-advisor"
+    },
+    "qoder": {
+      "install_path": "skills/home-advisor"
+    }
+  }
+}
